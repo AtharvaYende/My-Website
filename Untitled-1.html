@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>WTFAtharva</title>
+  
+  <link class="googlefont" href="https://fonts.googleapis.com/css2?family=Ovo&display=swap" rel="stylesheet">
+  
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 100%;
+      font-weight: inherit;
+    }
+    
+    body {
+      background: #000000;
+      color: #ffffff;
+      width: 100%;
+    }
+    
+    .text {
+      font-family:"Ovo", serif;
+      display: none;
+      opacity: 0;
+      font-size: 26px;
+      line-height: 30px;
+      font-variant-ligatures: normal;
+      visibility: hidden;
+    }
+    
+    .container {
+      display: flex;
+      gap: 4vw;
+      padding: 3vw;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .photo-section {
+      flex-shrink: 0;
+      width: 300px;
+    }
+    
+    .photo-placeholder {
+      width: 100%;
+      aspect-ratio: 1;
+      background: #111111;
+      border-radius: 2px;
+      margin-bottom: 2vw;
+      animation: fadein .2s forwards ease-out;
+      opacity: 0;
+    }
+    
+    .content-section {
+      flex-grow: 1;
+    }
+    
+    .section {
+      margin-bottom: 3vw;
+      animation: fadein .2s forwards ease-out;
+      opacity: 0;
+    }
+    
+    .label {
+      font-size: 20px;
+      opacity: 0.5;
+      margin-bottom: 1vw;
+    }
+    
+    .text p {
+      margin: 20px 0;
+      opacity: 0;
+      display: none;
+      visibility: hidden;
+      animation: fadein .2s forwards ease-out;
+    }
+    
+    .text a {
+      text-decoration: none;
+      color: inherit;
+      opacity: 0.5;
+      transition: opacity 0.2s ease;
+    }
+    
+    .text a:hover {
+      opacity: 1;
+    }
+    
+    @keyframes fadein {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .photo-section {
+        width: 200px;
+      }
+    }
+    
+    .view-more {
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 20px;  /* reduced from 22px */
+      letter-spacing: 0.02em;
+    }
+    
+    .social-links, .social-rows {
+      margin-top: 15px;
+    }
+    
+    .social-links a, .social-rows a {
+      text-decoration: none;
+      color: #ffffff;
+      opacity: 0.5;
+      transition: opacity 0.2s ease;
+    }
+    
+    .social-links a:hover, .social-rows a:hover {
+      opacity: 1;
+    }
+    
+    /* Desktop styles */
+    @media screen and (min-width: 769px) {
+      .social-rows {
+        display: none;
+      }
+      .social-links {
+        display: block;
+        font-size: 22px;
+      }
+    }
+    
+    /* Mobile styles */
+    @media screen and (max-width: 768px) {
+      .social-links {
+        display: none;
+      }
+      .social-rows {
+        display: block;
+        font-size: 20px;
+      }
+      .social-row {
+        margin: 8px 0;
+      }
+    }
+  </style>
+  <script
+	src="https://script.refix.ai/script.min.js"
+	type="text/javascript"
+	data-refix-token="e6f132ed-ff3a-4215-accf-f68a1430b42d"
+	defer
+></script>
+</head>
+<body style="display:none;">
+  <div class="text">
+    <div class="container">
+      <div class="photo-section">
+        <div class="photo-placeholder" style="animation-delay: 0.1s;">
+          <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            preload="auto"
+            style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px;">
+            <!-- WebM format (better web support) -->
+            <source src="profile-video.webm" type="video/webm">
+            <!-- MP4 format (wide compatibility) -->
+            <source src="assets/videos/profile-video.mp4" type="video/mp4">
+            <!-- MOV as last resort -->
+            <source src="assets/videos/profile-video.MOV" type="video/quicktime">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        
+        <!-- Desktop social links -->
+        <div class="social-links" style="animation-delay: 0.2s;">
+          <a href="https://x.com/gigamisfit">x</a> • 
+          <a href="https://open.spotify.com/album/5G5rgQHzdQnw32SI0WjIo5?si=yHtEr24aQWizlJnOaQGLRQ">Spotify</a> • 
+          <a href="https://www.instagram.com/wtfatharva.xyz/">ig</a> • 
+          <a href="https://www.linkedin.com/in/atharva-yende-11309a1b7/">in</a> • 
+        </div>
+
+        <!-- Mobile social links -->
+        <div class="social-rows" style="animation-delay: 0.2s;">
+          <div class="social-row line1">
+            <a href="https://x.com/gigamisfit">x</a> • 
+            <a href="https://www.instagram.com/wtfatharva.xyz/">ig</a> • 
+            <a href="https://open.spotify.com/user/heettike">tunes</a>
+          </div>
+          <div class="social-row line2">
+            <a href="https://www.linkedin.com/in/atharva-yende-11309a1b7/">in</a> •  
+            <a href="mailto:01atharva.work@gmail.com">mail</a>
+          </div>
+        </div>
+      </div>
+      <div class="content-section">
+        <div class="section" style="animation-delay: 0.3s;">
+
+          <p> What if your resume wasn’t a PDF — but a Movie?
+            <br> <br>
+            <span style="font-size: 75%"> 
+                I’m WTFAtharva. I left a comfortable job at Aditya Birla, packed a mic, a camera, and a dream, and moved to Bangalore with just 2 months  of runway. Why?
+                To build a resume that can’t be ignored.
+                
+                Over the next 75 days, I’m meeting one builder a day  from scrappy startup founders to breakout brands and creative underdogs. I’m capturing their journeys, lessons, and WTF moments that define Bangalore’s startup scene.
+                
+                This is more than a content series.
+                It’s a live social experiment: how far can storytelling, consistency, and intent take someone trying to break into their dream fund — without a referral, a pitch deck, or a fancy title?
+                
+                The goal?
+                Land a job at WTF Funds. And earn a real conversation with Nikhil Kamath in 75 days or less.
+              <br>
+              <a href="https://www.instagram.com/wtfatharva.xyz/">latest work</a>,  
+              <a href="/https://calendly.com/01atharva-work">Calendly,</a>
+              <a href="https://wa.me/9921042219">Let's chat ,</a>
+            </span>
+          </p>
+        </div>
+    
+
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript">const fs = 5;</script>
+  <script type="text/javascript" src="https://temper.one/temper.js"></script>
+</body>
+</html>
+
