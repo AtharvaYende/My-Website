@@ -51,14 +51,18 @@
         background: #111111;
         border-radius: 2px;
         margin-bottom: 2vw;
+        overflow: hidden;
+        position: relative;
       }
 
       .photo-placeholder video {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: auto;
-        border-radius: 2px;
-        display: block;
+        height: 100%;
         object-fit: cover;
+        border-radius: 2px;
       }
 
       .content-section {
