@@ -6,7 +6,6 @@
     <title>WTFAtharva</title>
 
     <link
-      class="googlefont"
       href="https://fonts.googleapis.com/css2?family=Ovo&display=swap"
       rel="stylesheet"
     />
@@ -28,12 +27,9 @@
 
       .text {
         font-family: "Ovo", serif;
-        display: none;
-        opacity: 0;
         font-size: 26px;
         line-height: 30px;
         font-variant-ligatures: normal;
-        visibility: hidden;
       }
 
       .container {
@@ -55,8 +51,14 @@
         background: #111111;
         border-radius: 2px;
         margin-bottom: 2vw;
-        animation: fadein 0.2s forwards ease-out;
-        opacity: 0;
+      }
+
+      .photo-placeholder video {
+        width: 100%;
+        height: auto;
+        border-radius: 2px;
+        display: block;
+        object-fit: cover;
       }
 
       .content-section {
@@ -65,61 +67,12 @@
 
       .section {
         margin-bottom: 3vw;
-        animation: fadein 0.2s forwards ease-out;
-        opacity: 0;
       }
 
       .label {
         font-size: 20px;
         opacity: 0.5;
         margin-bottom: 1vw;
-      }
-
-      .text p {
-        margin: 20px 0;
-        opacity: 0;
-        display: none;
-        visibility: hidden;
-        animation: fadein 0.2s forwards ease-out;
-      }
-
-      .text a {
-        text-decoration: none;
-        color: inherit;
-        opacity: 0.5;
-        transition: opacity 0.2s ease;
-      }
-
-      .text a:hover {
-        opacity: 1;
-      }
-
-      @keyframes fadein {
-        0% {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-        }
-
-        .photo-section {
-          width: 200px;
-        }
-      }
-
-      .view-more {
-        display: inline-block;
-        margin-top: 15px;
-        font-size: 20px; /* reduced from 22px */
-        letter-spacing: 0.02em;
       }
 
       .social-links,
@@ -140,7 +93,6 @@
         opacity: 1;
       }
 
-      /* Desktop styles */
       @media screen and (min-width: 769px) {
         .social-rows {
           display: none;
@@ -151,96 +103,72 @@
         }
       }
 
-      /* Mobile styles */
       @media screen and (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .photo-section {
+          width: 200px;
+        }
+
         .social-links {
           display: none;
         }
+
         .social-rows {
           display: block;
           font-size: 20px;
         }
+
         .social-row {
           margin: 8px 0;
         }
       }
     </style>
-    <script
-      src="https://script.refix.ai/script.min.js"
-      type="text/javascript"
-      data-refix-token="e6f132ed-ff3a-4215-accf-f68a1430b42d"
-      defer
-    ></script>
   </head>
-  <body style="display: none">
+
+  <body>
     <div class="text">
       <div class="container">
         <div class="photo-section">
-          <div class="photo-placeholder" style="animation-delay: 0.1s">
-            <video
-              autoplay
-              loop
-              muted
-              playsinline
-              preload="auto"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 2px;
-              "
-            >
-              <!-- WebM format (better web support) -->
-              <source src="GIF2.mp4" type="video/webm" />
-              <!-- MP4 format (wide compatibility) -->
+          <div class="photo-placeholder">
+            <video autoplay loop muted playsinline preload="auto">
               <source src="GIF2.mp4" type="video/mp4" />
-              <!-- MOV as last resort -->
-              <source
-                src="GIF2.mp4"
-                type="video/quicktime"
-              />
               Your browser does not support the video tag.
             </video>
           </div>
 
           <!-- Desktop social links -->
-          <div class="social-links" style="animation-delay: 0.2s">
+          <div class="social-links">
             <a href="https://x.com/gigamisfit">x</a> •
-            <a
-              href="https://open.spotify.com/album/5G5rgQHzdQnw32SI0WjIo5?si=yHtEr24aQWizlJnOaQGLRQ"
-              >Spotify</a
+            <a href="https://open.spotify.com/album/5G5rgQHzdQnw32SI0WjIo5?si=yHtEr24aQWizlJnOaQGLRQ">Spotify</a> •
+            <a href="mailto:01atharva.work@gmail.com">Mail</a>
           </div>
 
           <!-- Mobile social links -->
-          <div class="social-rows" style="animation-delay: 0.2s">
-            <div class="social-row line1">
+          <div class="social-rows">
+            <div class="social-row">
               <a href="https://x.com/gigamisfit">x</a> •
-              <a href="https://open.spotify.com/album/5G5rgQHzdQnw32SI0WjIo5?si=yHtEr24aQWizlJnOaQGLRQ">Spotify</a>
-            </div>
-            <div class="social-row line2">
-              >
-              •
-              <a href="mailto:01atharva.work@gmail.com">mail</a>
+              <a href="https://open.spotify.com/album/5G5rgQHzdQnw32SI0WjIo5?si=yHtEr24aQWizlJnOaQGLRQ">Spotify</a> •
+              <a href="mailto:01atharva.work@gmail.com">Mail</a>
             </div>
           </div>
         </div>
+
         <div class="content-section">
-          <div class="section" style="animation-delay: 0.3s">
+          <div class="section">
             <p>
-               <br />
-                    brands, creators, marathons, sky pics. 24.
-              <br><br/>
+              brands, creators, marathons, sky pics. 24.
+              <br /><br />
               <span style="font-size: 75%">
-        
-building <a href="https://theunpaidcompany.xyz/">@ The Unpaid Company</a>; leading content ops & narrative design. ran content + event ops at Token2049 Dubai, ETHDenver, and IIT Bombay. ex–sales & CRM lead @ Aditya Birla.
-currently in my WTF Atharva era — running around Bangalore capturing stories that make you say WTF, and trying to get Nikhil Kamath on mic.
-                <br><br/>
-<strong>time outside work: long runs, longer decks, sometimes clouds, always chaos.</strong>
-                <br><br/>
-                <a href="https://docs.google.com/document/d/1DSLvMeFZ6R_QXFyYN2ZE_kAumERhbbq6Pdyw4jveu1c/edit?usp=sharing"
-                  >proof of work</a>,
-                <a href="https://calendly.com/01atharva-work/30min">Calendly,</a>
-                <a href="https://wa.me/9921042219">Let's chat ,</a>
+                building <a href="https://theunpaidcompany.xyz/">@ The Unpaid Company</a>; leading content ops & narrative design. ran content + event ops at Token2049 Dubai, ETHDenver, and IIT Bombay. ex–sales & CRM lead @ Aditya Birla. currently in my WTF Atharva era — running around Bangalore capturing stories that make you say WTF, and trying to get Nikhil Kamath on mic.
+                <br /><br />
+                <strong>time outside work: long runs, longer decks, sometimes clouds, always chaos.</strong>
+                <br /><br />
+                <a href="https://docs.google.com/document/d/1DSLvMeFZ6R_QXFyYN2ZE_kAumERhbbq6Pdyw4jveu1c/edit?usp=sharing">proof of work</a>,
+                <a href="https://calendly.com/01atharva-work/30min">Calendly</a>,
+                <a href="https://wa.me/9921042219">Let's chat</a>,
                 <a href="https://strava.app.link/BUVdbvuMUUb">Catch me if you can</a>
               </span>
             </p>
@@ -248,17 +176,5 @@ currently in my WTF Atharva era — running around Bangalore capturing stories t
         </div>
       </div>
     </div>
-
-    <script type="text/javascript">
-      const fs = 5;
-    </script>
-    <script type="text/javascript" src="https://temper.one/temper.js"></script>
-    <script>
-      const brandings = document.querySelectorAll(".branding");
-
-      brandings.forEach((branding) => {
-        branding.remove();
-      });
-    </script>
   </body>
 </html>
